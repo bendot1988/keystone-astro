@@ -477,6 +477,18 @@ p {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.hero-stat__heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-stat__heading img {
+  width: 0.78rem;
+  height: 0.78rem;
+  flex: 0 0 auto;
+}
+
 .hero-stat strong {
   color: white;
   font-size: 0.82rem;

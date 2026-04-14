@@ -90,9 +90,9 @@ const projects = [
 ];
 
 const stats = [
-  { value: 'Tailored', label: 'Plans for homeowners, not templates.' },
-  { value: 'Refined', label: 'finishes chosen for longevity and feel.' },
-  { value: 'Managed', label: 'a structured process with clear direction.' },
+  { value: 'Tailored', label: 'Plans for homeowners, not templates.', icon: '/icons/keystone-bullet-a.svg' },
+  { value: 'Refined', label: 'finishes chosen for longevity and feel.', icon: '/icons/keystone-bullet-b.svg' },
+  { value: 'Managed', label: 'a structured process with clear direction.', icon: '/icons/keystone-bullet-a.svg' },
 ];
 
 const testimonials = [
@@ -173,7 +173,10 @@ const testimonials = [
             <div class="hero-card__stats">
               {stats.map((item) => (
                 <div class="hero-stat">
-                  <strong>{item.value}</strong>
+                  <div class="hero-stat__heading">
+                    <img src={item.icon} alt="" aria-hidden="true" />
+                    <strong>{item.value}</strong>
+                  </div>
                   <span>{item.label}</span>
                 </div>
               ))}
