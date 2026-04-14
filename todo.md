@@ -1,0 +1,4 @@
+- [ ] Replace the homepage hero with the exact requested copy: "MAXIMISE YOUR SALE PRICE WITH EXPERT PRE-SALE RENOVATIONS." and the matching supporting paragraph and CTA labels.
+- [ ] Update the primary CTA buttons to "VIEW OUR PROJECTS" and "GET A QUOTE".
+- [ ] Change the site header to a fully white background so it stands out clearly against the logo area.
+- [ ] Re-test the preview and production build after the copy and header corrections.
