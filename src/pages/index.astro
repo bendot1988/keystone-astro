@@ -1,135 +1,121 @@
 ---
-// Design reminder for this page: preserve the reference site's editorial industrial modernism through dark-light section alternation, uppercase headings, architectural spacing, and restrained stone accents.
+// Design reminder for this page: Version 3 only. Build a polished homeowner-focused landing page with editorial spacing, warm stone accents, premium renovation imagery, and restrained motion.
 import MainLayout from '../layouts/MainLayout.astro';
+
+const navItems = [
+  { label: 'Home', href: '#top' },
+  { label: 'Services', href: '#services' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Contact', href: '#contact' },
+];
 
 const valueProps = [
   {
-    title: 'Specialist Focus',
-    text: 'Tailored specifically for the Leicester property market.',
+    title: 'Design-Led Planning',
+    text: 'Thoughtful renovation guidance that balances style, practicality, and budget.',
   },
   {
-    title: 'Rapid Delivery',
-    text: 'Works completed quickly to get your home listed sooner.',
+    title: 'Trusted Delivery',
+    text: 'Carefully managed works from early concept through final finishes.',
   },
   {
-    title: 'Proven ROI',
-    text: 'Smart updates designed to increase your final sale price.',
+    title: 'Lasting Quality',
+    text: 'Detail-focused craftsmanship designed to improve how your home looks and feels.',
   },
 ];
 
 const services = [
   {
-    title: 'Kitchen & Bathroom Refreshes',
-    text: "You don't always need a full rip-out. We specialise in modernising these key rooms through high-quality tiling, cabinet refinishing, new worktops, and modern fixtures.",
-    icon: '✦',
+    title: 'Kitchen Renovations',
+    text: 'From layout improvements to bespoke finishes, we create kitchens that feel calm, social, and highly functional.',
   },
   {
-    title: 'Cosmetic Interior Updates',
-    text: 'Fresh paint, modern flooring, and professional plastering can transform a tired space into a move-in ready home. We use neutral, buyer-friendly palettes.',
-    icon: '△',
+    title: 'Bathroom Upgrades',
+    text: 'Clean lines, durable materials, and refined detailing that transform everyday routines into a better experience.',
   },
   {
-    title: 'Kerb Appeal & External Works',
-    text: 'The sale starts at the pavement. From front door refreshes and jet-washing to garden tidying and fence repairs, we ensure your property makes a great first impression.',
-    icon: '▣',
+    title: 'Full Interior Refreshes',
+    text: 'Flooring, plastering, lighting, joinery, and decoration brought together in one coherent renovation plan.',
   },
   {
-    title: 'Repairs, Snagging & Finishing',
-    text: 'We take care of the small jobs that buyers notice: leaky taps, cracked tiles, stiff doors, and outdated lighting. We help the building survey come back clean.',
-    icon: '●',
+    title: 'Structural Reworking',
+    text: 'Open-plan adjustments and smarter room flow that unlock the full potential of your existing home.',
   },
 ];
 
 const processSteps = [
   {
-    number: '1',
-    title: 'The Property Walkthrough',
-    text: 'We visit your home in Leicester to identify the most cost-effective updates that will add the most value.',
-    accent: 'stone',
+    number: '01',
+    title: 'Discover',
+    text: 'We start by understanding how you live, what is not working, and the outcome you want from the space.',
   },
   {
-    number: '2',
-    title: 'The Rapid Renovation',
-    text: 'Our team carries out the work with minimal disruption. We stick to strict deadlines so your move stays on track.',
-    accent: 'charcoal',
+    number: '02',
+    title: 'Design & Plan',
+    text: 'We shape the scope, recommend finishes, and build a clear renovation path before work begins.',
   },
   {
-    number: '3',
-    title: 'The Market Launch',
-    text: "With the work complete and the house looking its best, you're ready to list with confidence and achieve your target price.",
-    accent: 'stone',
+    number: '03',
+    title: 'Build & Finish',
+    text: 'Our team delivers the work with care, communication, and a strong focus on finish quality.',
   },
 ];
 
 const trustPoints = [
-  {
-    title: 'Speed Matters',
-    text: "We know every week your house isn't on the market is a week wasted. We prioritise efficiency.",
-  },
-  {
-    title: 'Budget Conscious',
-    text: "We won't suggest updates that don't add value. Our focus is on your Return on Investment (ROI).",
-  },
-  {
-    title: 'Local Knowledge',
-    text: 'We know what buyers in Oadby, Wigston, and the wider Leicester area are looking for right now.',
-  },
-  {
-    title: 'Full Reliability',
-    text: 'We are fully insured, professional, and we turn up when we say we will. No chasing required.',
-  },
+  'A considered, homeowner-first approach rather than one-size-fits-all building work.',
+  'Clear communication around scope, timing, and finish decisions throughout the project.',
+  'A strong eye for detail, material balance, and practical everyday usability.',
+  'A renovation result that feels cohesive, lived-in, and properly resolved.',
 ];
 
 const projects = [
   {
-    title: 'Project: Kitchen Refresh in Knighton',
-    work: 'Cabinet respray, new oak worktops, and subway tiling.',
-    result: 'Property went under offer within 48 hours of re-listing.',
-    beforeImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=800',
-    afterImage: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800',
+    title: 'Contemporary Kitchen Transformation',
+    summary: 'A dated kitchen was reworked into a brighter, more social space with cleaner storage lines and warmer material contrast.',
+    image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&q=80&w=1400',
+    tag: 'Kitchen Renovation',
   },
   {
-    title: 'Project: Full Cosmetic Hallway & Lounge Update',
-    work: 'Neutral painting, luxury vinyl tile flooring, and new skirting.',
-    result: 'Added £10k to the valuation and improved buyer feedback instantly.',
-    beforeImage: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&q=80&w=1000',
-    afterImage: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=1000',
+    title: 'Calm Bathroom Refit',
+    summary: 'We introduced a more refined layout, contemporary fixtures, and durable finishes for a quieter, more luxurious feel.',
+    image: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&q=80&w=1400',
+    tag: 'Bathroom Upgrade',
+  },
+  {
+    title: 'Open-Plan Family Living Space',
+    summary: 'Structural and decorative updates created a better-connected room sequence with improved light and day-to-day flow.',
+    image: 'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&q=80&w=1400',
+    tag: 'Interior Reconfiguration',
   },
 ];
 
-const coverage = [
-  'Leicester City',
-  'Oadby',
-  'Wigston',
-  'Loughborough',
-  'Hinckley',
-  'Market Harborough',
-  'Melton Mowbray',
-  'Coalville',
-  'Blaby',
-  'Lutterworth',
+const stats = [
+  { value: 'Tailored', label: 'Plans for homeowners, not templates.' },
+  { value: 'Refined', label: 'Finishes chosen for longevity and feel.' },
+  { value: 'Managed', label: 'A structured process with clear direction.' },
 ];
 
 const testimonials = [
   {
-    quote:
-      'Richard and the team were fantastic. We were worried about our kitchen putting off buyers. Keystone refreshed it in less than a week, and the house sold for over the asking price. Highly recommend!',
-    author: 'S. Miller, Leicester',
+    quote: 'Keystone approached our renovation like a design problem as much as a building job. The finished space feels far more intentional and much more usable.',
+    author: 'Private homeowner',
   },
   {
-    quote:
-      'As an estate agent, I need contractors I can rely on to get properties ready for market fast. Keystone Renovations are my go-to for any pre-sale works. They understand the market perfectly.',
-    author: 'Local Estate Agent',
+    quote: 'The team brought order to a project that initially felt overwhelming. Communication stayed clear, the finishes were strong, and the whole house feels elevated.',
+    author: 'Home renovation client',
   },
 ];
 ---
 
-<MainLayout>
+<MainLayout
+  title="Keystone Renovations | Private Homeowner Focus"
+  description="Keystone Renovations helps private homeowners bring renovation visions to life through thoughtful planning, high-quality finishes, and professionally managed delivery."
+>
   <main>
-    <section class="hero" id="top">
-      <div class="hero__overlay"></div>
-      <div class="shell hero__shell">
-        <header class="topbar">
+    <section class="hero hero--v3" id="top">
+      <div class="hero__backdrop"></div>
+      <div class="shell">
+        <header class="site-header" data-animate="fade-down">
           <a class="brand" href="#top" aria-label="Keystone Renovations home">
             <img
               src="https://storage.googleapis.com/shutquote/keystone-logo%20Large.png"
@@ -137,40 +123,54 @@ const testimonials = [
             />
           </a>
 
-          <div class="version-switcher" aria-label="Version selector">
-            <span class="version-switcher__label">Version 1: Pre-Sale Renovations Focus</span>
-            <div class="version-switcher__buttons">
-              <span class="version-switcher__button version-switcher__button--active">Version 1</span>
-              <span class="version-switcher__button">Version 2</span>
-              <span class="version-switcher__button">Version 3</span>
-              <span class="version-switcher__button">Version 4</span>
+          <nav class="site-nav" aria-label="Primary navigation">
+            {navItems.map((item) => (
+              <a href={item.href}>{item.label}</a>
+            ))}
+          </nav>
+
+          <a class="button button--solid" href="#contact">Book a Consultation</a>
+        </header>
+
+        <div class="hero__grid">
+          <div class="hero__content" data-animate="fade-up">
+            <p class="eyebrow">Version 3 · Private Homeowner Focus</p>
+            <h1>We Bring Your Renovation Vision to Life.</h1>
+            <p class="hero__lede">
+              Thoughtful renovations for private homeowners who want better flow, stronger finishes,
+              and a home that feels more intentional from room to room.
+            </p>
+
+            <div class="hero__actions">
+              <a class="button button--solid" href="#projects">View Projects</a>
+              <a class="button button--ghost" href="#services">Explore Services</a>
             </div>
           </div>
 
-          <a class="button button--solid" href="#contact">Get a Quote</a>
-        </header>
-
-        <div class="hero__content">
-          <div class="hero__eyebrow">Pre-Sale Renovations for Leicester Homes</div>
-          <h1>Maximise your sale price with expert pre-sale renovations.</h1>
-          <p>
-            High-impact, fast-turnaround property updates in Leicester. We help homeowners and
-            agents reduce time on the market and increase buyer confidence.
-          </p>
-
-          <div class="hero__actions">
-            <a class="button button--solid" href="#projects">View Our Projects</a>
-            <a class="button button--ghost" href="#contact">Get a Quote</a>
-          </div>
+          <aside class="hero-card" data-animate="fade-left">
+            <span class="hero-card__label">The Keystone Touch</span>
+            <h2>Renovations done with clarity, care, and a sharper eye for detail.</h2>
+            <p>
+              We help homeowners shape more functional, more beautiful interiors without losing sight
+              of buildability, comfort, or long-term value.
+            </p>
+            <div class="hero-card__stats">
+              {stats.map((item) => (
+                <div class="hero-stat">
+                  <strong>{item.value}</strong>
+                  <span>{item.label}</span>
+                </div>
+              ))}
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
     <section class="value-strip">
       <div class="shell value-strip__grid">
-        {valueProps.map((item) => (
-          <article class="value-card">
-            <span class="value-card__icon">○</span>
+        {valueProps.map((item, index) => (
+          <article class="value-card" data-animate="fade-up" style={`transition-delay:${index * 120}ms`}>
             <h2>{item.title}</h2>
             <p>{item.text}</p>
           </article>
@@ -179,40 +179,47 @@ const testimonials = [
     </section>
 
     <section class="section section--light intro">
-      <div class="shell narrow-flow">
-        <div class="section-marker">01</div>
-        <h2>Your Partner in a Successful Sale.</h2>
-        <p>
-          At Keystone Renovations, we understand that selling a home is one of life's biggest
-          transitions. Often, a property needs a lift to compete with new builds or modern
-          listings, but homeowners do not want the stress of a six-month build.
-        </p>
-        <p>
-          Based in Leicester, we specialise in pre-sale improvements. We focus on the areas that
-          matter most to buyers: kitchens, bathrooms, and first impressions. Our goal is not just
-          to make a house look better — it is to make it sell better.
-        </p>
-        <p>
-          By working closely with local estate agents and homeowners, we identify the specific
-          snags and cosmetic issues that might hold a sale back. We provide a professional,
-          reliable, and high-quality service that gives you peace of mind and a better return on
-          your investment.
-        </p>
+      <div class="shell intro__grid">
+        <div class="intro__copy" data-animate="fade-up">
+          <p class="section-kicker">About Keystone</p>
+          <h2>Making ambitious home renovations feel structured and achievable.</h2>
+          <p>
+            Keystone Renovations works with private homeowners who want more than a superficial
+            update. We help shape renovation schemes that improve how a home works, feels, and
+            presents itself every day.
+          </p>
+          <p>
+            Whether the goal is a better kitchen layout, a calmer bathroom, or a full interior
+            refresh, our process combines practical planning with a design-conscious finish. The
+            result is a home that feels resolved rather than simply altered.
+          </p>
+        </div>
+
+        <div class="intro__media" data-animate="fade-left">
+          <img
+            src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&q=80&w=1400"
+            alt="Refined modern interior with carefully balanced materials"
+            loading="lazy"
+          />
+        </div>
       </div>
     </section>
 
     <section class="section section--soft services" id="services">
       <div class="shell">
-        <div class="section-heading">
-          <div class="section-marker">02</div>
-          <h2>High-Impact Updates for Modern Buyers.</h2>
-          <p>We focus on the improvements that deliver the highest return on investment.</p>
+        <div class="section-heading section-heading--left" data-animate="fade-up">
+          <p class="section-kicker">Services</p>
+          <h2>Professional renovation services shaped around real homes.</h2>
+          <p>
+            We focus on high-value interior improvements that elevate both everyday living and the
+            overall character of the property.
+          </p>
         </div>
 
         <div class="services__grid">
-          {services.map((service) => (
-            <article class="service-card">
-              <div class="service-card__icon">{service.icon}</div>
+          {services.map((service, index) => (
+            <article class="service-card" data-animate="fade-up" style={`transition-delay:${index * 110}ms`}>
+              <span class="service-card__number">0{index + 1}</span>
               <h3>{service.title}</h3>
               <p>{service.text}</p>
             </article>
@@ -221,19 +228,17 @@ const testimonials = [
       </div>
     </section>
 
-    <section class="section section--light process" id="process">
+    <section class="section section--light process">
       <div class="shell">
-        <div class="section-heading">
-          <div class="section-marker">03</div>
-          <h2>From Consultation to Completion.</h2>
-          <p>Our simple 3-step process designed for speed and efficiency.</p>
+        <div class="section-heading" data-animate="fade-up">
+          <p class="section-kicker">Process</p>
+          <h2>A cleaner renovation journey from first conversation to final finish.</h2>
         </div>
 
-        <div class="process__line"></div>
         <div class="process__grid">
-          {processSteps.map((step) => (
-            <article class="process-card">
-              <div class={`process-card__number process-card__number--${step.accent}`}>{step.number}</div>
+          {processSteps.map((step, index) => (
+            <article class="process-card" data-animate="fade-up" style={`transition-delay:${index * 120}ms`}>
+              <span class="process-card__step">{step.number}</span>
               <h3>{step.title}</h3>
               <p>{step.text}</p>
             </article>
@@ -243,59 +248,45 @@ const testimonials = [
     </section>
 
     <section class="section section--dark trust">
-      <div class="shell split-layout split-layout--reverse">
-        <div class="split-layout__content">
-          <div class="section-marker section-marker--light">04</div>
-          <h2>Why Sellers Trust Keystone.</h2>
+      <div class="shell trust__grid">
+        <div class="trust__media" data-animate="fade-right">
+          <img
+            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=1400"
+            alt="Decorator completing detailed finish work in a bright home interior"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="trust__content" data-animate="fade-up">
+          <p class="section-kicker section-kicker--light">Why Keystone</p>
+          <h2>More professional, more considered, and more aligned with how people really live.</h2>
           <div class="trust__list">
             {trustPoints.map((point) => (
               <article class="trust-item">
-                <div class="trust-item__bullet"></div>
-                <div>
-                  <h3>{point.title}</h3>
-                  <p>{point.text}</p>
-                </div>
+                <span></span>
+                <p>{point}</p>
               </article>
             ))}
           </div>
         </div>
-
-        <div class="split-layout__media">
-          <img
-            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=1000"
-            alt="Decorator carefully finishing shutters in a bright interior"
-            loading="lazy"
-          />
-        </div>
       </div>
     </section>
 
-    <section class="section section--light gallery" id="projects">
+    <section class="section section--light projects" id="projects">
       <div class="shell">
-        <div class="section-heading section-heading--left">
-          <div class="section-marker">05</div>
-          <h2>Project Gallery</h2>
-          <p>See the difference our pre-sale renovations make.</p>
+        <div class="section-heading section-heading--left" data-animate="fade-up">
+          <p class="section-kicker">Selected Work</p>
+          <h2>Recent project directions that reflect our renovation approach.</h2>
         </div>
 
-        <div class="gallery__stack">
-          {projects.map((project) => (
-            <article class="project-card">
-              <div class="project-card__images">
-                <figure>
-                  <img src={project.beforeImage} alt={`${project.title} before renovation`} loading="lazy" />
-                  <figcaption>Before</figcaption>
-                </figure>
-                <figure>
-                  <img src={project.afterImage} alt={`${project.title} after renovation`} loading="lazy" />
-                  <figcaption>After</figcaption>
-                </figure>
-              </div>
-
-              <div class="project-card__copy">
+        <div class="projects__grid">
+          {projects.map((project, index) => (
+            <article class="project-card project-card--stacked" data-animate="fade-up" style={`transition-delay:${index * 120}ms`}>
+              <img src={project.image} alt={project.title} loading="lazy" />
+              <div class="project-card__body">
+                <span class="project-card__tag">{project.tag}</span>
                 <h3>{project.title}</h3>
-                <p><strong>Work:</strong> {project.work}</p>
-                <p><strong>Result:</strong> {project.result}</p>
+                <p>{project.summary}</p>
               </div>
             </article>
           ))}
@@ -303,45 +294,16 @@ const testimonials = [
       </div>
     </section>
 
-    <section class="section section--soft coverage">
-      <div class="shell split-layout">
-        <div class="split-layout__content">
-          <div class="section-marker">06</div>
-          <h2>Where We Work</h2>
-          <p>
-            We provide expert pre-sale renovations across Leicestershire and the surrounding areas.
-          </p>
-          <div class="coverage__grid">
-            {coverage.map((place) => (
-              <div class="coverage-card">
-                <h3>{place}</h3>
-                <p>Professional, reliable improvements tailored to local market expectations.</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div class="split-layout__media split-layout__media--tall">
-          <img
-            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2000"
-            alt="Modern renovated home exterior with strong kerb appeal"
-            loading="lazy"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--dark testimonials">
+    <section class="section section--soft testimonials">
       <div class="shell">
-        <div class="section-heading section-heading--left section-heading--light">
-          <div class="section-marker section-marker--light">07</div>
-          <h2>What Clients and Agents Say.</h2>
-          <p>Trusted by homeowners and professionals who need properties ready for market.</p>
+        <div class="section-heading" data-animate="fade-up">
+          <p class="section-kicker">Client Perspective</p>
+          <h2>What homeowners value about the process.</h2>
         </div>
 
         <div class="testimonials__grid">
-          {testimonials.map((item) => (
-            <blockquote class="testimonial-card">
+          {testimonials.map((item, index) => (
+            <blockquote class="testimonial-card" data-animate="fade-up" style={`transition-delay:${index * 140}ms`}>
               <p>“{item.quote}”</p>
               <footer>{item.author}</footer>
             </blockquote>
@@ -350,32 +312,72 @@ const testimonials = [
       </div>
     </section>
 
-    <section class="section section--light cta" id="contact">
-      <div class="shell cta__panel">
+    <section class="section section--dark cta" id="contact">
+      <div class="shell cta__panel" data-animate="fade-up">
         <div>
-          <div class="section-marker">08</div>
-          <h2>Ready to Get Your Property Market-Ready?</h2>
+          <p class="section-kicker section-kicker--light">Contact</p>
+          <h2>Ready to talk through your renovation plans?</h2>
           <p>
-            Whether you are a homeowner preparing to move or an estate agent looking to help a
-            client, we are here to help. We cover all of Leicester and the surrounding villages.
-          </p>
-          <p class="coverage-note">
-            <strong>Areas Covered:</strong> Leicester, Oadby, Wigston, Loughborough, Hinckley, and
-            Blaby.
+            If you are planning a kitchen, bathroom, or wider interior transformation, we can help
+            shape the project into something practical, refined, and well managed from the outset.
           </p>
         </div>
 
         <div class="contact-card">
           <a href="tel:07549919442">07549 919 442</a>
           <a href="mailto:hello@keystonerenovations.co.uk">hello@keystonerenovations.co.uk</a>
-          <a href="https://www.instagram.com/keystonerenovationsuk/" target="_blank" rel="noreferrer">
-            @keystonerenovationsuk
-          </a>
-          <a href="https://facebook.com/keystonerenovationsuk" target="_blank" rel="noreferrer">
-            Facebook
-          </a>
+          <a href="#projects">View recent project direction</a>
         </div>
       </div>
     </section>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__grid">
+        <div class="site-footer__brand">
+          <img
+            src="https://storage.googleapis.com/shutquote/keystone-logo%20Large.png"
+            alt="Keystone Renovations"
+          />
+          <p>
+            Bringing renovation visions to life for homeowners who want practical improvements and a
+            more resolved, design-conscious finish.
+          </p>
+        </div>
+
+        <div>
+          <h3>Navigation</h3>
+          <div class="site-footer__links">
+            {navItems.map((item) => (
+              <a href={item.href}>{item.label}</a>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <div class="site-footer__links">
+            <a href="tel:07549919442">07549 919 442</a>
+            <a href="mailto:hello@keystonerenovations.co.uk">hello@keystonerenovations.co.uk</a>
+            <span>Private Homeowner Renovations</span>
+          </div>
+        </div>
+      </div>
+    </footer>
   </main>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.18 }
+    );
+
+    document.querySelectorAll('[data-animate]').forEach((element) => observer.observe(element));
+  </script>
 </MainLayout>
