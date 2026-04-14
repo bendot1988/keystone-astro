@@ -2,3 +2,7 @@
 - [ ] Update the primary CTA buttons to "VIEW OUR PROJECTS" and "GET A QUOTE".
 - [ ] Change the site header to a fully white background so it stands out clearly against the logo area.
 - [ ] Re-test the preview and production build after the copy and header corrections.
+- [ ] Add a polished hamburger menu for tablet and mobile navigation.
+- [ ] Switch the header to the collapsed navigation state at 1083px so the layout does not break on tablet widths.
+- [ ] Create a clean dropdown panel with good spacing, transitions, and clear tap targets for mobile navigation.
+- [ ] Re-test the header in preview and production build after the responsive navigation changes.

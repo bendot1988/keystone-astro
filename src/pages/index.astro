@@ -129,7 +129,23 @@ const testimonials = [
             ))}
           </nav>
 
-          <a class="button button--solid" href="#contact">Book a Consultation</a>
+          <div class="site-header__actions">
+            <a class="button button--solid" href="#contact">Book a Consultation</a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+
+          <div class="mobile-menu" id="mobile-menu" hidden>
+            <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+              {navItems.map((item) => (
+                <a href={item.href}>{item.label}</a>
+              ))}
+            </nav>
+            <a class="button button--solid mobile-menu__cta" href="#contact">Book a Consultation</a>
+          </div>
         </header>
 
         <div class="hero__grid">
@@ -379,5 +395,41 @@ const testimonials = [
     );
 
     document.querySelectorAll('[data-animate]').forEach((element) => observer.observe(element));
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('#mobile-menu');
+
+    if (menuToggle instanceof HTMLButtonElement && mobileMenu instanceof HTMLElement) {
+      const closeMenu = () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.hidden = true;
+        mobileMenu.classList.remove('is-open');
+      };
+
+      const openMenu = () => {
+        menuToggle.setAttribute('aria-expanded', 'true');
+        mobileMenu.hidden = false;
+        mobileMenu.classList.add('is-open');
+      };
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => closeMenu());
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 1083) {
+          closeMenu();
+        }
+      });
+    }
   </script>
 </MainLayout>
