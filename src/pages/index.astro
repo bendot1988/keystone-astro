@@ -1,0 +1,381 @@
+---
+// Design reminder for this page: preserve the reference site's editorial industrial modernism through dark-light section alternation, uppercase headings, architectural spacing, and restrained stone accents.
+import MainLayout from '../layouts/MainLayout.astro';
+
+const valueProps = [
+  {
+    title: 'Specialist Focus',
+    text: 'Tailored specifically for the Leicester property market.',
+  },
+  {
+    title: 'Rapid Delivery',
+    text: 'Works completed quickly to get your home listed sooner.',
+  },
+  {
+    title: 'Proven ROI',
+    text: 'Smart updates designed to increase your final sale price.',
+  },
+];
+
+const services = [
+  {
+    title: 'Kitchen & Bathroom Refreshes',
+    text: "You don't always need a full rip-out. We specialise in modernising these key rooms through high-quality tiling, cabinet refinishing, new worktops, and modern fixtures.",
+    icon: '✦',
+  },
+  {
+    title: 'Cosmetic Interior Updates',
+    text: 'Fresh paint, modern flooring, and professional plastering can transform a tired space into a move-in ready home. We use neutral, buyer-friendly palettes.',
+    icon: '△',
+  },
+  {
+    title: 'Kerb Appeal & External Works',
+    text: 'The sale starts at the pavement. From front door refreshes and jet-washing to garden tidying and fence repairs, we ensure your property makes a great first impression.',
+    icon: '▣',
+  },
+  {
+    title: 'Repairs, Snagging & Finishing',
+    text: 'We take care of the small jobs that buyers notice: leaky taps, cracked tiles, stiff doors, and outdated lighting. We help the building survey come back clean.',
+    icon: '●',
+  },
+];
+
+const processSteps = [
+  {
+    number: '1',
+    title: 'The Property Walkthrough',
+    text: 'We visit your home in Leicester to identify the most cost-effective updates that will add the most value.',
+    accent: 'stone',
+  },
+  {
+    number: '2',
+    title: 'The Rapid Renovation',
+    text: 'Our team carries out the work with minimal disruption. We stick to strict deadlines so your move stays on track.',
+    accent: 'charcoal',
+  },
+  {
+    number: '3',
+    title: 'The Market Launch',
+    text: "With the work complete and the house looking its best, you're ready to list with confidence and achieve your target price.",
+    accent: 'stone',
+  },
+];
+
+const trustPoints = [
+  {
+    title: 'Speed Matters',
+    text: "We know every week your house isn't on the market is a week wasted. We prioritise efficiency.",
+  },
+  {
+    title: 'Budget Conscious',
+    text: "We won't suggest updates that don't add value. Our focus is on your Return on Investment (ROI).",
+  },
+  {
+    title: 'Local Knowledge',
+    text: 'We know what buyers in Oadby, Wigston, and the wider Leicester area are looking for right now.',
+  },
+  {
+    title: 'Full Reliability',
+    text: 'We are fully insured, professional, and we turn up when we say we will. No chasing required.',
+  },
+];
+
+const projects = [
+  {
+    title: 'Project: Kitchen Refresh in Knighton',
+    work: 'Cabinet respray, new oak worktops, and subway tiling.',
+    result: 'Property went under offer within 48 hours of re-listing.',
+    beforeImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=800',
+    afterImage: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800',
+  },
+  {
+    title: 'Project: Full Cosmetic Hallway & Lounge Update',
+    work: 'Neutral painting, luxury vinyl tile flooring, and new skirting.',
+    result: 'Added £10k to the valuation and improved buyer feedback instantly.',
+    beforeImage: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&q=80&w=1000',
+    afterImage: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=1000',
+  },
+];
+
+const coverage = [
+  'Leicester City',
+  'Oadby',
+  'Wigston',
+  'Loughborough',
+  'Hinckley',
+  'Market Harborough',
+  'Melton Mowbray',
+  'Coalville',
+  'Blaby',
+  'Lutterworth',
+];
+
+const testimonials = [
+  {
+    quote:
+      'Richard and the team were fantastic. We were worried about our kitchen putting off buyers. Keystone refreshed it in less than a week, and the house sold for over the asking price. Highly recommend!',
+    author: 'S. Miller, Leicester',
+  },
+  {
+    quote:
+      'As an estate agent, I need contractors I can rely on to get properties ready for market fast. Keystone Renovations are my go-to for any pre-sale works. They understand the market perfectly.',
+    author: 'Local Estate Agent',
+  },
+];
+---
+
+<MainLayout>
+  <main>
+    <section class="hero" id="top">
+      <div class="hero__overlay"></div>
+      <div class="shell hero__shell">
+        <header class="topbar">
+          <a class="brand" href="#top" aria-label="Keystone Renovations home">
+            <img
+              src="https://storage.googleapis.com/shutquote/keystone-logo%20Large.png"
+              alt="Keystone Renovations"
+            />
+          </a>
+
+          <div class="version-switcher" aria-label="Version selector">
+            <span class="version-switcher__label">Version 1: Pre-Sale Renovations Focus</span>
+            <div class="version-switcher__buttons">
+              <span class="version-switcher__button version-switcher__button--active">Version 1</span>
+              <span class="version-switcher__button">Version 2</span>
+              <span class="version-switcher__button">Version 3</span>
+              <span class="version-switcher__button">Version 4</span>
+            </div>
+          </div>
+
+          <a class="button button--solid" href="#contact">Get a Quote</a>
+        </header>
+
+        <div class="hero__content">
+          <div class="hero__eyebrow">Pre-Sale Renovations for Leicester Homes</div>
+          <h1>Maximise your sale price with expert pre-sale renovations.</h1>
+          <p>
+            High-impact, fast-turnaround property updates in Leicester. We help homeowners and
+            agents reduce time on the market and increase buyer confidence.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button button--solid" href="#projects">View Our Projects</a>
+            <a class="button button--ghost" href="#contact">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-strip">
+      <div class="shell value-strip__grid">
+        {valueProps.map((item) => (
+          <article class="value-card">
+            <span class="value-card__icon">○</span>
+            <h2>{item.title}</h2>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section section--light intro">
+      <div class="shell narrow-flow">
+        <div class="section-marker">01</div>
+        <h2>Your Partner in a Successful Sale.</h2>
+        <p>
+          At Keystone Renovations, we understand that selling a home is one of life's biggest
+          transitions. Often, a property needs a lift to compete with new builds or modern
+          listings, but homeowners do not want the stress of a six-month build.
+        </p>
+        <p>
+          Based in Leicester, we specialise in pre-sale improvements. We focus on the areas that
+          matter most to buyers: kitchens, bathrooms, and first impressions. Our goal is not just
+          to make a house look better — it is to make it sell better.
+        </p>
+        <p>
+          By working closely with local estate agents and homeowners, we identify the specific
+          snags and cosmetic issues that might hold a sale back. We provide a professional,
+          reliable, and high-quality service that gives you peace of mind and a better return on
+          your investment.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--soft services" id="services">
+      <div class="shell">
+        <div class="section-heading">
+          <div class="section-marker">02</div>
+          <h2>High-Impact Updates for Modern Buyers.</h2>
+          <p>We focus on the improvements that deliver the highest return on investment.</p>
+        </div>
+
+        <div class="services__grid">
+          {services.map((service) => (
+            <article class="service-card">
+              <div class="service-card__icon">{service.icon}</div>
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light process" id="process">
+      <div class="shell">
+        <div class="section-heading">
+          <div class="section-marker">03</div>
+          <h2>From Consultation to Completion.</h2>
+          <p>Our simple 3-step process designed for speed and efficiency.</p>
+        </div>
+
+        <div class="process__line"></div>
+        <div class="process__grid">
+          {processSteps.map((step) => (
+            <article class="process-card">
+              <div class={`process-card__number process-card__number--${step.accent}`}>{step.number}</div>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark trust">
+      <div class="shell split-layout split-layout--reverse">
+        <div class="split-layout__content">
+          <div class="section-marker section-marker--light">04</div>
+          <h2>Why Sellers Trust Keystone.</h2>
+          <div class="trust__list">
+            {trustPoints.map((point) => (
+              <article class="trust-item">
+                <div class="trust-item__bullet"></div>
+                <div>
+                  <h3>{point.title}</h3>
+                  <p>{point.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div class="split-layout__media">
+          <img
+            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=1000"
+            alt="Decorator carefully finishing shutters in a bright interior"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light gallery" id="projects">
+      <div class="shell">
+        <div class="section-heading section-heading--left">
+          <div class="section-marker">05</div>
+          <h2>Project Gallery</h2>
+          <p>See the difference our pre-sale renovations make.</p>
+        </div>
+
+        <div class="gallery__stack">
+          {projects.map((project) => (
+            <article class="project-card">
+              <div class="project-card__images">
+                <figure>
+                  <img src={project.beforeImage} alt={`${project.title} before renovation`} loading="lazy" />
+                  <figcaption>Before</figcaption>
+                </figure>
+                <figure>
+                  <img src={project.afterImage} alt={`${project.title} after renovation`} loading="lazy" />
+                  <figcaption>After</figcaption>
+                </figure>
+              </div>
+
+              <div class="project-card__copy">
+                <h3>{project.title}</h3>
+                <p><strong>Work:</strong> {project.work}</p>
+                <p><strong>Result:</strong> {project.result}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft coverage">
+      <div class="shell split-layout">
+        <div class="split-layout__content">
+          <div class="section-marker">06</div>
+          <h2>Where We Work</h2>
+          <p>
+            We provide expert pre-sale renovations across Leicestershire and the surrounding areas.
+          </p>
+          <div class="coverage__grid">
+            {coverage.map((place) => (
+              <div class="coverage-card">
+                <h3>{place}</h3>
+                <p>Professional, reliable improvements tailored to local market expectations.</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="split-layout__media split-layout__media--tall">
+          <img
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2000"
+            alt="Modern renovated home exterior with strong kerb appeal"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark testimonials">
+      <div class="shell">
+        <div class="section-heading section-heading--left section-heading--light">
+          <div class="section-marker section-marker--light">07</div>
+          <h2>What Clients and Agents Say.</h2>
+          <p>Trusted by homeowners and professionals who need properties ready for market.</p>
+        </div>
+
+        <div class="testimonials__grid">
+          {testimonials.map((item) => (
+            <blockquote class="testimonial-card">
+              <p>“{item.quote}”</p>
+              <footer>{item.author}</footer>
+            </blockquote>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light cta" id="contact">
+      <div class="shell cta__panel">
+        <div>
+          <div class="section-marker">08</div>
+          <h2>Ready to Get Your Property Market-Ready?</h2>
+          <p>
+            Whether you are a homeowner preparing to move or an estate agent looking to help a
+            client, we are here to help. We cover all of Leicester and the surrounding villages.
+          </p>
+          <p class="coverage-note">
+            <strong>Areas Covered:</strong> Leicester, Oadby, Wigston, Loughborough, Hinckley, and
+            Blaby.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <a href="tel:07549919442">07549 919 442</a>
+          <a href="mailto:hello@keystonerenovations.co.uk">hello@keystonerenovations.co.uk</a>
+          <a href="https://www.instagram.com/keystonerenovationsuk/" target="_blank" rel="noreferrer">
+            @keystonerenovationsuk
+          </a>
+          <a href="https://facebook.com/keystonerenovationsuk" target="_blank" rel="noreferrer">
+            Facebook
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</MainLayout>

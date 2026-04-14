@@ -1,0 +1,34 @@
+---
+// Design reminder for this layout: editorial industrial modernism with warm whites, charcoal fields, bronze-taupe accents, and disciplined typography.
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Keystone Renovations | Pre-Sale Renovations Focus',
+  description = 'High-impact, fast-turnaround pre-sale renovations in Leicester designed to improve buyer confidence and maximise sale price.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="https://storage.googleapis.com/shutquote/keystone-logo%20Large.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
