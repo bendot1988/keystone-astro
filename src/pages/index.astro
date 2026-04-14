@@ -3,42 +3,42 @@
 import MainLayout from '../layouts/MainLayout.astro';
 
 const navItems = [
-  { label: 'Home', href: '#top' },
-  { label: 'Services', href: '#services' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'home', href: '#top' },
+  { label: 'services', href: '#services' },
+  { label: 'projects', href: '#projects' },
+  { label: 'contact', href: '#contact' },
 ];
 
 const valueProps = [
   {
-    title: 'Design-Led Planning',
+    title: 'Design-led planning',
     text: 'Thoughtful renovation guidance that balances style, practicality, and budget.',
   },
   {
-    title: 'Trusted Delivery',
+    title: 'Trusted delivery',
     text: 'Carefully managed works from early concept through final finishes.',
   },
   {
-    title: 'Lasting Quality',
+    title: 'Lasting quality',
     text: 'Detail-focused craftsmanship designed to improve how your home looks and feels.',
   },
 ];
 
 const services = [
   {
-    title: 'Kitchen Renovations',
+    title: 'Kitchen renovations',
     text: 'From layout improvements to bespoke finishes, we create kitchens that feel calm, social, and highly functional.',
   },
   {
-    title: 'Bathroom Upgrades',
+    title: 'Bathroom upgrades',
     text: 'Clean lines, durable materials, and refined detailing that transform everyday routines into a better experience.',
   },
   {
-    title: 'Full Interior Refreshes',
+    title: 'Full interior refreshes',
     text: 'Flooring, plastering, lighting, joinery, and decoration brought together in one coherent renovation plan.',
   },
   {
-    title: 'Structural Reworking',
+    title: 'Structural reworking',
     text: 'Open-plan adjustments and smarter room flow that unlock the full potential of your existing home.',
   },
 ];
@@ -51,12 +51,12 @@ const processSteps = [
   },
   {
     number: '02',
-    title: 'Design & Plan',
+    title: 'Design and plan',
     text: 'We shape the scope, recommend finishes, and build a clear renovation path before work begins.',
   },
   {
     number: '03',
-    title: 'Build & Finish',
+    title: 'Build and finish',
     text: 'Our team delivers the work with care, communication, and a strong focus on finish quality.',
   },
 ];
@@ -70,29 +70,29 @@ const trustPoints = [
 
 const projects = [
   {
-    title: 'Contemporary Kitchen Transformation',
+    title: 'Contemporary kitchen transformation',
     summary: 'A dated kitchen was reworked into a brighter, more social space with cleaner storage lines and warmer material contrast.',
     image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&q=80&w=1400',
-    tag: 'Kitchen Renovation',
+    tag: 'Kitchen renovation',
   },
   {
-    title: 'Calm Bathroom Refit',
+    title: 'Calm bathroom refit',
     summary: 'We introduced a more refined layout, contemporary fixtures, and durable finishes for a quieter, more luxurious feel.',
     image: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&q=80&w=1400',
-    tag: 'Bathroom Upgrade',
+    tag: 'Bathroom upgrade',
   },
   {
-    title: 'Open-Plan Family Living Space',
+    title: 'Open-plan family living space',
     summary: 'Structural and decorative updates created a better-connected room sequence with improved light and day-to-day flow.',
     image: 'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&q=80&w=1400',
-    tag: 'Interior Reconfiguration',
+    tag: 'Interior reconfiguration',
   },
 ];
 
 const stats = [
-  { value: 'Tailored', label: 'Plans for homeowners, not templates.' },
-  { value: 'Refined', label: 'Finishes chosen for longevity and feel.' },
-  { value: 'Managed', label: 'A structured process with clear direction.' },
+  { value: 'Tailored', label: 'plans for homeowners, not templates.' },
+  { value: 'Refined', label: 'finishes chosen for longevity and feel.' },
+  { value: 'Managed', label: 'a structured process with clear direction.' },
 ];
 
 const testimonials = [
@@ -108,7 +108,7 @@ const testimonials = [
 ---
 
 <MainLayout
-  title="Keystone Renovations | Private Homeowner Focus"
+  title="Keystone renovations | private homeowner focus"
   description="Keystone Renovations helps private homeowners bring renovation visions to life through thoughtful planning, high-quality finishes, and professionally managed delivery."
 >
   <main>
@@ -130,7 +130,7 @@ const testimonials = [
           </nav>
 
           <div class="site-header__actions">
-            <a class="button button--solid" href="#contact">Book a Consultation</a>
+            <a class="button button--solid" href="#contact">Book a consultation</a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
               <span></span>
               <span></span>
@@ -144,27 +144,27 @@ const testimonials = [
                 <a href={item.href}>{item.label}</a>
               ))}
             </nav>
-            <a class="button button--solid mobile-menu__cta" href="#contact">Book a Consultation</a>
+            <a class="button button--solid mobile-menu__cta" href="#contact">Book a consultation</a>
           </div>
         </header>
 
         <div class="hero__grid">
           <div class="hero__content" data-animate="fade-up">
-            <p class="eyebrow">Leicester Pre-Sale Renovations</p>
-            <h1>MAXIMISE YOUR SALE PRICE WITH EXPERT PRE-SALE RENOVATIONS.</h1>
+            <p class="eyebrow">Leicester pre-sale renovations</p>
+            <h1>Maximise your sale price with expert pre-sale renovations.</h1>
             <p class="hero__lede">
               High-impact, fast-turnaround property updates in Leicester. We help homeowners and
               agents reduce time on the market and increase buyer confidence.
             </p>
 
             <div class="hero__actions">
-              <a class="button button--solid" href="#projects">VIEW OUR PROJECTS</a>
-              <a class="button button--ghost" href="#contact">GET A QUOTE</a>
+              <a class="button button--solid" href="#projects">View our projects</a>
+              <a class="button button--ghost" href="#contact">Get a quote</a>
             </div>
           </div>
 
           <aside class="hero-card" data-animate="fade-left">
-            <span class="hero-card__label">The Keystone Touch</span>
+            <span class="hero-card__label">The keystone touch</span>
             <h2>Renovations done with clarity, care, and a sharper eye for detail.</h2>
             <p>
               We help homeowners shape more functional, more beautiful interiors without losing sight
@@ -197,7 +197,7 @@ const testimonials = [
     <section class="section section--light intro">
       <div class="shell intro__grid">
         <div class="intro__copy" data-animate="fade-up">
-          <p class="section-kicker">About Keystone</p>
+          <p class="section-kicker">About keystone</p>
           <h2>Making ambitious home renovations feel structured and achievable.</h2>
           <p>
             Keystone Renovations works with private homeowners who want more than a superficial
@@ -274,7 +274,7 @@ const testimonials = [
         </div>
 
         <div class="trust__content" data-animate="fade-up">
-          <p class="section-kicker section-kicker--light">Why Keystone</p>
+          <p class="section-kicker section-kicker--light">Why keystone</p>
           <h2>More professional, more considered, and more aligned with how people really live.</h2>
           <div class="trust__list">
             {trustPoints.map((point) => (
@@ -291,7 +291,7 @@ const testimonials = [
     <section class="section section--light projects" id="projects">
       <div class="shell">
         <div class="section-heading section-heading--left" data-animate="fade-up">
-          <p class="section-kicker">Selected Work</p>
+          <p class="section-kicker">Selected work</p>
           <h2>Recent project directions that reflect our renovation approach.</h2>
         </div>
 
@@ -313,7 +313,7 @@ const testimonials = [
     <section class="section section--soft testimonials">
       <div class="shell">
         <div class="section-heading" data-animate="fade-up">
-          <p class="section-kicker">Client Perspective</p>
+          <p class="section-kicker">Client perspective</p>
           <h2>What homeowners value about the process.</h2>
         </div>
 
@@ -374,7 +374,7 @@ const testimonials = [
           <div class="site-footer__links">
             <a href="tel:07549919442">07549 919 442</a>
             <a href="mailto:hello@keystonerenovations.co.uk">hello@keystonerenovations.co.uk</a>
-            <span>Private Homeowner Renovations</span>
+            <span>Private homeowner renovations</span>
           </div>
         </div>
       </div>

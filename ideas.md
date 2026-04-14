@@ -10,13 +10,13 @@
 
 **Layout Paradigm:** A left-anchored, offset composition with broad horizontal bands and asymmetrical content docking. Instead of centering every element, content should feel placed like architectural annotations on a presentation board.
 
-**Signature Elements:** Thin rule dividers inspired by blueprint markings, cropped edge-to-edge photography framed by negative space, and small uppercase section markers that resemble specification labels.
+**Signature Elements:** Thin rule dividers inspired by blueprint markings, cropped edge-to-edge photography framed by negative space, and small sentence-case section markers that resemble specification labels.
 
 **Interaction Philosophy:** Interactions should feel precise and quiet. Hover states should sharpen contrast, reveal underlines, and slightly shift elevation rather than bounce or scale dramatically.
 
 **Animation:** Use restrained motion: fade-up entrances, slow image reveals, subtle mask wipes, and low-distance horizontal slides. Durations should stay between 300ms and 700ms with ease-out timing to preserve a deliberate, premium rhythm.
 
-**Typography System:** Use **Cormorant Garamond** for large statements and **Manrope** for body, labels, and navigation. Headlines should use high contrast sizing with tight leading; utility text should be uppercase, letter-spaced, and compact.
+**Typography System:** Use **Cormorant Garamond** for large statements and **Manrope** for body, labels, and navigation. Headlines should use high contrast sizing with tight leading; utility text should be sentence case with only subtle letter spacing.
 </idea>
 </text>
 </response>
