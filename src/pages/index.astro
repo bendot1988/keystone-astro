@@ -91,7 +91,7 @@ const projects = [
 
 const stats = [
   { value: 'Tailored', label: 'Plans for homeowners, not templates.', icon: '/icons/keystone-bullet-a.svg' },
-  { value: 'Refined', label: 'finishes chosen for longevity and feel.', icon: '/icons/keystone-bullet-b.svg' },
+  { value: 'Refined', label: 'finishes chosen for longevity and feel.', icon: '/icons/keystone-bullet-a.svg' },
   { value: 'Managed', label: 'a structured process with clear direction.', icon: '/icons/keystone-bullet-a.svg' },
 ];
 
@@ -114,13 +114,10 @@ const testimonials = [
   <main>
     <section class="hero hero--v3" id="top">
       <div class="hero__backdrop"></div>
-      <div class="shell">
-        <header class="site-header" data-animate="fade-down">
+      <header class="site-header" data-animate="fade-down">
+        <div class="shell site-header__inner">
           <a class="brand" href="#top" aria-label="Keystone Renovations home">
-            <img
-              src="https://storage.googleapis.com/shutquote/keystone-logo%20Large.png"
-              alt="Keystone Renovations"
-            />
+            <img src="/logos/ksr-main.svg" alt="Keystone Renovations" />
           </a>
 
           <nav class="site-nav" aria-label="Primary navigation">
@@ -146,8 +143,10 @@ const testimonials = [
             </nav>
             <a class="button button--solid mobile-menu__cta" href="#contact">Book a consultation</a>
           </div>
-        </header>
+        </div>
+      </header>
 
+      <div class="shell">
         <div class="hero__grid">
           <div class="hero__content" data-animate="fade-up">
             <p class="eyebrow">East Midlands pre-sale renovations</p>
@@ -168,7 +167,7 @@ const testimonials = [
             <h2>Renovations done with clarity, care, and a sharper eye for detail.</h2>
             <p>
               We help homeowners shape more functional, more beautiful interiors without losing sight
-              of design intent, comfort, or long-term value.
+              of functionality, comfort, quality, or long-term value.
             </p>
             <div class="hero-card__stats">
               {stats.map((item) => (
@@ -354,7 +353,7 @@ const testimonials = [
       <div class="shell site-footer__grid">
         <div class="site-footer__brand">
           <img
-            src="https://storage.googleapis.com/shutquote/keystone-logo%20Large.png"
+            src="/logos/ksr-white.svg"
             alt="Keystone Renovations"
           />
           <p>
