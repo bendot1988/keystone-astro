@@ -1,4 +1,6 @@
 /* Design reminder for this stylesheet: Version 3 only. Keep the original charcoal, stone, ivory, and white palette, but apply it with more restraint, stronger spacing, quieter luxury, and purposeful motion. */
+@import "tailwindcss";
+
 :root {
   --color-charcoal: #1b1a1a;
   --color-charcoal-soft: rgba(27, 26, 26, 0.78);

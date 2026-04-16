@@ -1,6 +1,7 @@
 ---
 // Design reminder for this page: Version 3 only. Build a polished homeowner-focused landing page with editorial spacing, warm stone accents, premium renovation imagery, and restrained motion.
 import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
 
 const navItems = [
   { label: 'home', href: '#top' },
@@ -89,12 +90,6 @@ const projects = [
   },
 ];
 
-const stats = [
-  { value: 'Tailored', label: 'Plans for homeowners, not templates.', icon: '/icons/keystone-bullet-a.svg' },
-  { value: 'Refined', label: 'Finishes chosen for longevity and feel.', icon: '/icons/keystone-bullet-a.svg' },
-  { value: 'Managed', label: 'A structured process with clear direction.', icon: '/icons/keystone-bullet-a.svg' },
-];
-
 const testimonials = [
   {
     quote: 'Keystone approached our renovation like a design problem as much as a delivery brief. The finished space feels far more intentional and much more usable.',
@@ -108,82 +103,43 @@ const testimonials = [
 ---
 
 <MainLayout
-  title="Keystone renovations | private homeowner focus"
-  description="Keystone Renovations helps private homeowners bring renovation visions to life through thoughtful planning, high-quality finishes, and professionally managed delivery."
+  title="Keystone Renovations | thoughtful home improvements"
+  description="Keystone Renovations helps homeowners bring renovations to life through high-quality, reliable property improvements delivered with care."
 >
   <main>
-    <section class="hero hero--v3" id="top">
-      <div class="hero__backdrop"></div>
-      <header class="site-header" data-animate="fade-down">
-        <div class="shell site-header__inner">
-          <a class="brand" href="#top" aria-label="Keystone Renovations home">
-            <img src="/logos/ksr-main.svg" alt="Keystone Renovations" />
-          </a>
+    <header class="site-header" data-animate="fade-down">
+      <div class="shell site-header__inner">
+        <a class="brand" href="#top" aria-label="Keystone Renovations home">
+          <img src="/logos/ksr-main.svg" alt="Keystone Renovations" />
+        </a>
 
-          <nav class="site-nav" aria-label="Primary navigation">
+        <nav class="site-nav" aria-label="Primary navigation">
+          {navItems.map((item) => (
+            <a href={item.href}>{item.label}</a>
+          ))}
+        </nav>
+
+        <div class="site-header__actions">
+          <a class="button button--solid" href="#contact">Discuss your project</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu" hidden>
+          <nav class="mobile-menu__nav" aria-label="Mobile navigation">
             {navItems.map((item) => (
               <a href={item.href}>{item.label}</a>
             ))}
           </nav>
-
-          <div class="site-header__actions">
-            <a class="button button--solid" href="#contact">Book a consultation</a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-
-          <div class="mobile-menu" id="mobile-menu" hidden>
-            <nav class="mobile-menu__nav" aria-label="Mobile navigation">
-              {navItems.map((item) => (
-                <a href={item.href}>{item.label}</a>
-              ))}
-            </nav>
-            <a class="button button--solid mobile-menu__cta" href="#contact">Book a consultation</a>
-          </div>
-        </div>
-      </header>
-
-      <div class="shell">
-        <div class="hero__grid">
-          <div class="hero__content" data-animate="fade-up">
-            <p class="eyebrow">East Midlands pre-sale renovations</p>
-            <h1>Maximise your sale price with expert pre-sale renovations.</h1>
-            <p class="hero__lede">
-              High-impact, fast-turnaround property updates across the East Midlands. We help homeowners and
-              agents reduce time on the market and increase buyer confidence.
-            </p>
-
-            <div class="hero__actions">
-              <a class="button button--solid" href="#projects">View our projects</a>
-              <a class="button button--ghost" href="#contact">Get a quote</a>
-            </div>
-          </div>
-
-          <aside class="hero-card" data-animate="fade-left">
-            <span class="hero-card__label">The keystone touch</span>
-            <h2>Renovations done with clarity, care, and a sharper eye for detail.</h2>
-            <p>
-              We help homeowners shape more functional, more beautiful interiors without losing sight
-              of functionality, comfort, quality, or long-term value.
-            </p>
-            <div class="hero-card__stats">
-              {stats.map((item) => (
-                <div class="hero-stat">
-                  <div class="hero-stat__heading">
-                    <img src={item.icon} alt="" aria-hidden="true" />
-                    <strong>{item.value}</strong>
-                  </div>
-                  <span>{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </aside>
+          <a class="button button--solid mobile-menu__cta" href="#contact">Discuss your project</a>
         </div>
       </div>
-    </section>
+    </header>
+
+    <Hero />
 
     <section class="value-strip">
       <div class="shell value-strip__grid">
